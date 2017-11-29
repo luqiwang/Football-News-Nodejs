@@ -1,9 +1,24 @@
-<% include ./partials/header %> 
-<h1>Sign Up!</h1>
 
-<form action="/register" method="post">
-    <input type="text" name="username" placeholder="username">
-    <input type="password" name="password" placeholder="password">
-    <button>Sign Up</button>
-</form>
-<% include ./partials/footer %> 
+
+
+<% include partials/header%>
+<div class="container">
+    <div class="row" style="width:30%; margin:0 auto;">
+    <h1 style="text-align:center">Register Account</h1>
+        <form action="/register" method="post">
+            <div class="form-group">
+                <input class="form-control" type="text" name="username" placeholder="username" ></input>    
+            </div>
+            <div class="form-group">
+                <input class="form-control" type="password" name="password" placeholder="password"></input>    
+            </div>
+            <div class="form-group">
+                <button class="btn btn-lg btn-primary btn-block">Sign up</button>    
+            </div>
+            <a href="/stories">Back</a>
+        </form>    
+    </div>
+    
+</div>
+
+<% include partials/footer%>
