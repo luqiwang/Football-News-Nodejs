@@ -16,8 +16,9 @@ var commentRoutes    = require("./routes/comments"),
     indexRoutes      = require("./routes/index");
 
 
-//mongoose.connect("mongodb://localhost/football");
-mongoose.connect("mongodb://looooki:lokiwang67@ds123956.mlab.com:23956/football");
+mongoose.connect(process.env.DATABASEURL);
+//mongoose.connect("mongodb://looooki:lokiwang67@ds123956.mlab.com:23956/football");
+
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
