@@ -1,0 +1,33 @@
+<% include ../partials/header %> 
+ <div class="container">
+     <header class="jumbotron">
+         <div class="container">
+             <h1>Welcome To Madridista!</h1>
+             <p>View Real Madrid News From All Over The World</p>
+             <p>
+                <a class="btn btn-primary btn-large" href="/stories/new">Share My News</a>
+             </p>
+         </div>
+     </header>
+     <div class="container">
+         <% stories.forEach(function(story){ %>
+             <div class="row">
+                 <div class="col-sm-3">
+                      <div class="thumbnail">
+                       <img id="coverpic" src="<%= story.image %>">
+                       </div>
+                </div>
+                <div class="col-sm-9">
+                    <div class="caption">
+                       <h4><%= story.name %></h4>
+                   </div>
+                   <p>
+                       <a href="/stories/<%= story._id %>" class="btn btn-primary">More Info</a>
+                   </p>
+                </div>
+             </div>
+             <% }); %> 
+     </div>
+     
+</div>
+<% include ../partials/footer %> 
