@@ -15,7 +15,10 @@ var commentRoutes    = require("./routes/comments"),
     storiesRoutes    = require("./routes/stories"),
     indexRoutes      = require("./routes/index");
 
-mongoose.connect("mongodb://localhost/football");
+
+//mongoose.connect("mongodb://localhost/football");
+mongoose.connect("mongodb://looooki:lokiwang67@ds123956.mlab.com:23956/football");
+
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
